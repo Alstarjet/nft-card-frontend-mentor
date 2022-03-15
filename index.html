@@ -5,26 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      font-family:'Outfit', sans-serif;
+      margin: 0;
+    }
+    main{
+      height: 96vh;
+      background-color: hsl(217, 54%, 11%);
+      display: grid;
+      place-content: center;
+    }
+    .card{
+      background-color:hsl(216, 50%, 16%);
+      width: 330px;
+      height: 530px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 4%;
+      color:hsl(215, 51%, 70%);
+    }
+    .title{
+      color: white;
+      font-weight: 600;
+      font-size: 24px;
+      width: 83%;
+
+    }
+    .card_img{
+      margin-top: 24px;
+      width: 280px;
+      border-radius: 5%;
+    }
+    .card_description{
+      margin-top: 0;
+      font-weight: 100;
+      width: 83%;
+    }
+    .card_data{
+      display: flex;
+      width: 83%;
+      justify-content: space-between;
+      color:hsl(178, 100%, 50%);
+    }
+    .clock{
+      color: hsl(215, 51%, 70%);
+    }
+    .data{
+      display: flex;
+      align-items: center;
+    }
+    .card_data img{
+      margin-right: 6px;
+    }
+    .card_creator img{
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-right: 14px;
+    }
+    .card_creator{
+      width: 83%;
+      margin: 20px;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
   </style>
 </head>
 <body>
+  <main>
+      <div class="card">
+        <img src="./images/image-equilibrium.jpg" alt="foto de equilibrium" class="card_img">
+          <h1 class="title">
+            Equilibrium #3429
+          </h1>
+          <p class="card_description">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="card_data ">
+            <div class="eth data">
+              <img src="./images/icon-ethereum.svg" alt="">
+              0.041 ETH
+            </div>
+            <div class="clock data">
+              <img src="./images/icon-clock.svg" alt="">
+              3 days left
+            </div>         
+          </div>
+        <div class="data card_creator">
+          <img src="./images/image-avatar.png" alt="">
+          Creation of&nbsp<a href=""> Jules Wyvern</a> 
+        </div>
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
+        
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
